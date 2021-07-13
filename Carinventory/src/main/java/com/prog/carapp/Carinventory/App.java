@@ -19,7 +19,7 @@ public class App
 {  
     public static void main( String[] args )
     {
-        System.out.println( "Program Started!!!!!" );
+        System.out.println( "Program Started!!!!" );
         ApplicationContext context = new ClassPathXmlApplicationContext("com/prog/carapp/Carinventory/Config.xml");
         Mainloosecoupledao firstdata = context.getBean("firstdata",Mainloosecoupledao.class);
         
@@ -37,10 +37,6 @@ public class App
                  int finalresult = firstdata.insert(bn);
           	   System.out.println("Data added"+finalresult);
           	   System.out.println("Inserted Data "+bn);
-          	 
-               System.out.println("Enter the Value to be Continue ....Select 1 for INSERT DATA...OR Select 2 For SHOW DATA");
-               intvalue = sc.nextInt();
-               
           	 }else if(intvalue == 2) {
               List<Bean> getalldata = firstdata.getalldata();
            	  for(Bean alldata : getalldata ) {
